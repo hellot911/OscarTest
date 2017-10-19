@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>利用Gogo tester+goagent翻墙 - 回味依旧博客</title>
+<meta name="keywords" content="回味依旧,美图,破解软件,辅助,易语言,编程,IT,QQ群发,营销,科技,探索,谷歌,翻墙,防火墙,下载,文件名">
+<meta name="description" content="最近防火墙 把谷歌的很多ip都给屏蔽了，间接的导致了goagent 也不能稳定的工作了，但道高一尺，魔高一仗。网友们还是找到了方法翻越**。这里简单介绍下用这2个工具的方法">
+<meta name="generator" content="emlog">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.huiwei19.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.huiwei19.com/wlwmanifest.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.huiwei19.com/rss.php">
+<link href="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/style.css" rel="stylesheet" type="text/css">
+<script src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/_Incapsula_Resource" async="" type="text/javascript"></script><script src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/47019" async="" type="text/javascript"></script><script src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/common_tpl.js" type="text/javascript"></script>
+<script type="text/javascript" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/jquery-1.js"></script>
+<script type="text/javascript">jQuery(function($){$("a[href*=://]:not(a[href^=http://www.huiwei19.com/],a[href^=javascript:])").attr("target", "_blank");})</script>
+<script src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/jquery-1.js"></script>
+<script type="text/javascript">
+var a = false, blog_url = "http://www.huiwei19.com/";
+$(function(){
+	$("textarea[name=comment]").focus(function() {
+		if (!a) {
+			$.getScript(blog_url + "content/plugins/face/smile.js");
+			a = true;
+		}
+	});
+});
+</script>
+<link rel="stylesheet" type="text/css" href="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/style_002.css">
+	<script type="text/javascript" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/brush.js"></script>
+	<link type="text/css" rel="stylesheet" href="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/shCore.css">
+	<link type="text/css" rel="stylesheet" href="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/shThemeDefault.css">
+	<script type="text/javascript">SyntaxHighlighter.config.clipboardSwf = 'http://www.huiwei19.com/content/plugins/et_highlighter51/scripts/clipboard.swf';SyntaxHighlighter.all();</script>
+	<style type="text/css">.highslide img {cursor: url(http://www.huiwei19.com/content/plugins/kl_highslide/highslide/graphics/zoomin.cur), pointer !important;}</style></head>
+<!--[if IE 6]>
+<link href="http://www.huiwei19.com/content/templates/Hcms/images/ie6.css" rel="stylesheet" type="text/css" />
+<script src="http://letskillie6.googlecode.com/svn/trunk/letskillie6.zh_CN.pack.js"></script>
+<script src="http://www.huiwei19.com/content/templates/Hcms/js/PNG.js"></script>
+<script>DD_belatedPNG.fix('.png_bg');</script>
+<![endif]-->
+<body>
+
+<div id="header" class="png_bg">
+		<div id="header_inner">
+		    		<strong class="logo">
+			<a href="http://www.huiwei19.com/" class="png_bg" title="回味依旧博客">回味依旧博客</a>
+			</strong>
+		       <div class="header_bg png_bg"></div>
+       <div class="toplinks">
+       <div id="_userlogin">	
+			<a href="http://www.huiwei19.com/rss.php" title="欢迎订阅我的博客" target="_blank">RSS订阅</a><span>|</span>
+						<a href="http://www.huiwei19.com/admin/" title="登录" target="_blank">登录</a>
+			       </div>
+       	<div id="top_nav">
+		<form name="keyform" method="get" action="http://www.huiwei19.com/index.php">
+		<div class="form clearfix">
+        <label for="s"></label>
+        <input name="keyword" class="search-keyword" onfocus="if (this.value == '请输入关键字进行搜索') {this.value = '';}" onblur="if (this.value == '') {this.value = '请输入关键字进行搜索';}" value="请输入关键字进行搜索" type="text">
+        <button type="submit" class="select_class" onmouseout="this.className='select_class'" onmouseover="this.className='select_over'">搜索</button>
+		</div>
+		</form>
+       </div>
+       </div>
+	   <div id="navmenu"><ul class="menu">
+	   <li><a href="http://www.huiwei19.com/" class="common">首页</a></li><li><a href="http://www.huiwei19.com/t" class="common">碎语</a></li>	   	   			<li><a href="http://www.huiwei19.com/softwarebox.html">软件</a></li>
+			<li><a href="http://www.huiwei19.com/?plugin=kl_album">相册</a></li>
+			<li><a href="http://www.huiwei19.com/Guestbook.html">留言</a></li>
+			<li><a href="http://www.huiwei19.com/link.html">链接</a></li>
+			<li><a href="http://www.huiwei19.com/?plugin=archiver">归档</a></li>
+			<li><a href="http://www.huiwei19.com/Cooperation.html">合作</a></li>
+			<li><a href="http://www.huiwei19.com/about.html">关于</a></li>
+	</ul></div>
+<div class="clearfix"></div>
+    </div>
+</div>
+
+<div id="wrapper" class="clearfix">
+ 	<div id="breadcrumbs" class="con_box clearfix">
+		<div class="bcrumbs"><strong><a href="http://www.huiwei19.com/" title="返回首页">home</a></strong>
+				<a href="http://www.huiwei19.com/sort/free" title="查看 免费资源 中的全部文章" rel="category tag">免费资源</a>
+			<a>利用Gogo tester+goagent翻墙</a>
+		</div>
+	</div>
+
+<div id="art_container clearfix">
+<div id="art_main1" class="art_white_bg fl"> 
+	 <div class="art_title clearfix">
+	             <span class="face_img"><img original="http://gravatar.duoshuo.com/avatar/736d0014273ff1e99124739c807759a5?s=&amp;d=&amp;r=" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/736d0014273ff1e99124739c807759a5.png" class="avatar" height="50" width="50"></span>
+			<h1>利用Gogo tester+goagent翻墙</h1>
+			<p class="info">
+			<small>时间:</small>：2014-07-26 
+			<small>栏目:</small> 		<a href="http://www.huiwei19.com/sort/free" title="查看 免费资源 中的全部文章" rel="category tag">免费资源</a>
+				<small>作者:</small> <a href="http://www.huiwei19.com/author/1" title="联系邮箱:admin@huiwei19.com&lt;br /&gt;
+博主QQ:68852874 68852874@qq.com">↗℡ 浮华 青春</a> 
+			<small>评论:</small> 0			<small>点击:</small> 5143 次
+			</p><!-- /info -->  
+			</div>
+<div class="article_content">
+		<div class="article-tag">
+		<p><strong>本文标签</strong>： 	<a href="http://www.huiwei19.com/tag/%E8%B0%B7%E6%AD%8C">谷歌</a>	<a href="http://www.huiwei19.com/tag/%E7%BF%BB%E5%A2%99">翻墙</a>	<a href="http://www.huiwei19.com/tag/%E9%98%B2%E7%81%AB%E5%A2%99">防火墙</a>	<a href="http://www.huiwei19.com/tag/%E4%B8%8B%E8%BD%BD">下载</a>	<a href="http://www.huiwei19.com/tag/%E6%96%87%E4%BB%B6%E5%90%8D">文件名</a></p>
+		</div>
+		<div class="clear"></div>
+				
+		<span style="font-size:14px;">最近防火墙 把谷歌的很多ip都给屏蔽了，间接的导致了goagent 也不能稳定的工作了，但道高一尺，魔高一仗。网友们还是找到了方法翻越**。这里简单介绍下用这2个工具的方法</span><br>
+<br>
+<span style="font-size:14px;color:#E53333;">1：go go tester 这个工具是用来寻找可用的google 地址</span><br>
+<span style="font-size:14px;color:#009900;">下载地址：</span><span style="font-size:14px;color:#009900;">http://pan.baidu.com/s/1hq9pbj2</span><br>
+<span style="font-size:14px;">下载之后，打开，搜索</span><br>
+<a class="highslide" target="_blank" href="http://www.huiwei19.com/content/uploadfile/201407/e1881406382583.jpg" id="ematt:1357"><img original="http://www.huiwei19.com/content/uploadfile/201407/thum-e1881406382583.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/thum-e1881406382583.jpg" title="点击查看原图" alt="QQ截图20140726214657.jpg" border="0" height="402" width="420"></a><br>
+<span style="font-size:14px;">搜索出当前可用的google 地址，并导出IP地址</span><br>
+<br>
+<span style="font-size:14px;color:#E53333;">2：修改goagent 的proxy.ini 的配置文件</span><br>
+<div class="syntaxhighlighter  " id="highlighter_497035"><div class="bar"><div class="toolbar"><a class="item viewSource" style="width: 16px; height: 16px;" title="view source" href="#viewSource">view source</a><div class="item copyToClipboard"><embed id="highlighter_497035_clipboard" type="application/x-shockwave-flash" title="copy to clipboard" allowscriptaccess="always" wmode="transparent" flashvars="highlighterId=highlighter_497035" menu="false" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/clipboard.swf" height="16" width="16"></div><a class="item printSource" style="width: 16px; height: 16px;" title="print" href="#printSource">print</a><a class="item about" style="width: 16px; height: 16px;" title="?" href="#about">?</a></div></div><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>01</code></td><td class="content"><code class="plain">[google_cn]</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>02</code></td><td class="content"><code class="plain">mode = https</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>03</code></td><td class="content"><code class="plain">window = 2</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>04</code></td><td class="content"><code class="plain">hosts
+ = 
+193.120.166.95|210.242.125.44|208.117.228.181|77.66.9.106|77.66.9.123|77.66.9.80|85.182.250.25|109.232.83.106|193.120.166.80|103.1.139.230</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>05</code></td><td class="content"><code class="plain">sites
+ = 
+.google.cn|.google.com|.googleusercontent.com|.googleapis.com|.google-analytics.com|.googlecode.com|.google.com.hk|.appspot.com|.android.com|.googlegroups.com|.googlesource.com</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>06</code></td><td class="content"><code class="plain">forcehttps
+ = 
+www.google.com.hk/url|.appspot.com|www.google.com/url|groups.google.com|code.google.com|mail.google.com|docs.google.com|profiles.google.com|developer.android.com|www.google.com.hk|webcache.googleusercontent.com</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>07</code></td><td class="content"><code class="plain">withgae
+ = 
+plus.google.com|play.googleapis.com|plusone.google.com|reader.googleusercontent.com|music.google.com|apis.google.com|feedproxy.google.com|books.google.com|autoproxy-**list.googlecode.com|c.docs.google.com|translate.google.com</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>08</code></td><td class="content">&nbsp;</td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>09</code></td><td class="content"><code class="plain">[google_hk]</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="plain">mode = https</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="plain">window = 4</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="plain">hosts
+ = 
+193.120.166.95|210.242.125.44|208.117.228.181|77.66.9.106|77.66.9.123|77.66.9.80|85.182.250.25|109.232.83.106|193.120.166.80|103.1.139.230</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="plain">sites
+ = 
+.google.cn|.google.com|.googleusercontent.com|.googleapis.com|.google-analytics.com|.googlecode.com|.google.com.hk|.googlegroups.com|.googlesource.com</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="plain">forcehttps
+ = 
+www.google.com.hk/url|www.google.com/url|groups.google.com|mail.google.com|docs.google.com|profiles.google.com|developer.android.com|www.google.com.hk|webcache.googleusercontent.com</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="plain">withgae
+ = 
+www.google.com.hk/imgres|www.google.com/imgres|play.googleapis.com|plusone.google.com|reader.googleusercontent.com|music.google.com|apis.google.com|feedprox</code></td></tr></tbody></table></div></div></div>
+<span style="font-size:14px;"></span><span style="font-size:14px;">hosts的地址就是你所需要修改的地址</span><br>
+<br>
+<span style="font-size:14px;">大家试一试吧！</span><br>
+<span style="font-size:14px;"></span><br> 
+		<div class="clear"></div>		
+		         			
+		<div class="postcopyright">
+			<p><strong> 声明: </strong> 本文由(<a href="http://www.huiwei19.com/author/1" title="联系邮箱:admin@huiwei19.com&lt;br /&gt;
+博主QQ:68852874 68852874@qq.com">↗℡ 浮华 青春</a>)原创编译，转载请保留链接: <a href="http://www.huiwei19.com/free/use-gogotest-goagent-get-throught-GFW.html" title="利用Gogo tester+goagent翻墙">利用Gogo tester+goagent翻墙</a></p>
+		</div>
+</div><!--正文--> 
+	
+	<div class="con_pretext clearfix"><ul>		<li class="first">上一篇：<a href="http://www.huiwei19.com/SiteNotice/analysis-of-a-CF-hack-guns-faking-software.html">对QQ群中广泛流传的一个CF-CDKEY刷枪软件的分析解读</a></li>
+			<li class="last">下一篇：<a href="http://www.huiwei19.com/free/Emlog-touch-screen-template-Mobile-X-ray-Mobile-V1-1-release.html">Emlog触屏手机版X-Mobile V1.1版发布</a></li>
+	</ul></div>
+	<!--上一篇 下一篇--> 
+	
+	<div id="user_interactive">
+	<div class="left">
+		<div class="top"><span>（选择后可查看结果）</span>阅读本文后，您的心情是：</div>
+		<div class="show">&nbsp;</div>
+		<div class="vote">
+			<div class="item mood_0">恶心<br><input name="article_mood_vote" value="0" type="radio"><div class="cover"></div></div>
+			<div class="item mood_1">愤怒<br><input name="article_mood_vote" value="1" type="radio"><div class="cover"></div></div>
+			<div class="item mood_2">强赞<br><input name="article_mood_vote" value="2" type="radio"><div class="cover"></div></div>
+			<div class="item mood_3">感动<br><input name="article_mood_vote" value="3" type="radio"><div class="cover"></div></div>
+			<div class="item mood_4">路过<br><input name="article_mood_vote" value="4" type="radio"><div class="cover"></div></div>
+			<div class="item mood_5">无聊<br><input name="article_mood_vote" value="5" type="radio"><div class="cover"></div></div>
+			<div class="item mood_6">雷囧<br><input name="article_mood_vote" value="6" type="radio"><div class="cover"></div></div>
+			<div class="item mood_7">关注<br><input name="article_mood_vote" value="7" type="radio"><div class="cover"></div></div>
+		</div>
+	</div>
+	<div class="right">
+		<div class="alarm"></div>
+		<button type="button" name="1" class="praise good">顶<span>0</span></button>
+		<button type="button" name="0" class="praise bad">踩<span>0</span></button>
+	</div>
+	<div class="bk1"></div>
+</div>
+<script language="javascript">
+$(document).ready(function(){
+$.post("http://www.huiwei19.com/content/plugins/em_logdigg/em_logdigg_ajax.php?type=good&id=825","",function(data){
+	$(".good span").text(data.number[1]);$(".bad span").text(data.number[0]);
+	},"json");//顶或踩AJAX
+$("#user_interactive .right .praise").click(function(){
+	obj_temp=$(this);
+	$.post("http://www.huiwei19.com/content/plugins/em_logdigg/em_logdigg_ajax.php?type=good&id=825",{"vol":obj_temp.attr("name")},function(data){
+		if(data.result>=1){
+			//$("span",obj_temp).html($("span",obj_temp).html()*1+1);
+			$("span",obj_temp).html(data.number[obj_temp.attr("name")]);
+			if(obj_temp.attr("name")>0){
+				$("#user_interactive .right .alarm").html("“顶”成功啦！").show();
+			}else{
+				$("#user_interactive .right .alarm").html("“踩”成功啦！").show();
+			}
+		}else{
+						alert(data.error);
+		}
+	},"json");
+});
+
+
+//心情投票处理AJAX
+$("#user_interactive .vote .item .cover").click(function(){
+	$("#user_interactive .vote .item .cover").unbind("click");
+	var vote=$(this).prev(":radio").click().val();
+	$("#user_interactive .vote .item .cover").css("cursor","default").attr("title","您已经提交过心情了！").prev(":radio[name='article_mood_vote']").attr("disabled",true);
+	$.post("http://www.huiwei19.com/content/plugins/em_logdigg/em_logdigg_ajax.php?type=mood&id=825",{"vol":vote},function(data){
+		if(data.result==1){
+			var max_number=0;
+			var html_code="<table><tr>";
+			$.each(data.number,function(i,n){if(n>max_number){max_number=n;}});
+			$.each(data.number,function(i,n){
+				height=n*40/max_number;
+				html_code+="<td>"+n+"<br /><span class=\"pillars\" style=\"height:"+height+"px\"></span></td>"
+			});
+			html_code+="</tr></table>";
+			$("#user_interactive .left .show").html(html_code);
+		}else{
+			var max_number=0;
+			var html_code="<table><tr>";
+			$.each(data.number,function(i,n){if(n>max_number){max_number=n;}});
+			$.each(data.number,function(i,n){
+				height=n*40/max_number;
+				html_code+="<td>"+n+"<br /><span class=\"pillars\" style=\"height:"+height+"px\"></span></td>"
+			});
+			html_code+="</tr></table>";
+			$("#user_interactive .left .show").html(html_code);
+			alert(data.error);
+		}
+	},"json");
+});
+});
+</script><div style="display:none;">et_highlighter51</div><div class="relatedlist"><div class="relatedtitle">你应该会对下面的内容感兴趣：</div><ul><li><a href="http://www.huiwei19.com/free/15plus-EMU-blogs-bbs-7-intruction-information.html" title="15+个EMU博客论坛 +7大培训资料"><img original="http://www.huiwei19.com/content/uploadfile/201502/thum-cbc91423883956.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif"></a>
+<p><a href="http://www.huiwei19.com/free/15plus-EMU-blogs-bbs-7-intruction-information.html" title="15+个EMU博客论坛 +7大培训资料">15+个EMU博客论坛 +7大培训资料</a></p></li><li><a href="http://www.huiwei19.com/free/Hostyg-free-cpanel-hosting.html" title="Hostyg免费空间-300M/10GB/cPanel中文面板"><img original="http://www.huiwei19.com/content/uploadfile/201406/thum-4efd1401597274.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif"></a>
+<p><a href="http://www.huiwei19.com/free/Hostyg-free-cpanel-hosting.html" title="Hostyg免费空间-300M/10GB/cPanel中文面板">Hostyg免费空间-300M/10GB/cPanel中文面板</a></p></li><li><a href="http://www.huiwei19.com/free/useful-client-DNS.html" title="靠谱客户端DNS整理【转自追梦人博客】"><img original="http://www.huiwei19.com/content/templates/Hcms/images/log/1.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif"></a>
+<p><a href="http://www.huiwei19.com/free/useful-client-DNS.html" title="靠谱客户端DNS整理【转自追梦人博客】">靠谱客户端DNS整理【转自追梦人博客】</a></p></li><li><a href="http://www.huiwei19.com/free/alidns-dns-server.html" title="阿里DNS – 阿里巴巴集团发布的公共DNS解析服务"><img original="http://www.huiwei19.com/content/uploadfile/201407/1bb81404538265.png" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif"></a>
+<p><a href="http://www.huiwei19.com/free/alidns-dns-server.html" title="阿里DNS – 阿里巴巴集团发布的公共DNS解析服务">阿里DNS – 阿里巴巴集团发布的公共DNS解析服务</a></p></li><li><a href="http://www.huiwei19.com/free/vps-control-panel-for-business-nginxmanager.html" title="NginxManager：适用于LNMP的Linux主机管理面板"><img original="http://www.huiwei19.com/content/uploadfile/201406/thum-78601401623450.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif"></a>
+<p><a href="http://www.huiwei19.com/free/vps-control-panel-for-business-nginxmanager.html" title="NginxManager：适用于LNMP的Linux主机管理面板">NginxManager：适用于LNMP的Linux主机管理面板</a></p></li><li><a href="http://www.huiwei19.com/free/free-voip-for-android-iphone-PC.html" title="优秀的网络电话——云呼"><img original="http://www.huiwei19.com/content/uploadfile/201402/thum-2cb7848adba928663ead3467818c839b20140223040424.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif"></a>
+<p><a href="http://www.huiwei19.com/free/free-voip-for-android-iphone-PC.html" title="优秀的网络电话——云呼">优秀的网络电话——云呼</a></p></li><li><a href="http://www.huiwei19.com/free/free-call-shuoba.html" title="“说吧”网络电话，任意手机免费打，无限时长"><img original="http://www.huiwei19.com/content/uploadfile/201402/thum-4efd1392032902.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif"></a>
+<p><a href="http://www.huiwei19.com/free/free-call-shuoba.html" title="“说吧”网络电话，任意手机免费打，无限时长">“说吧”网络电话，任意手机免费打，无限时长</a></p></li></ul></div>	
+	<div class="clear"></div> 
+			
+<h3 id="comments" style="margin-bottom:10px">利用Gogo tester+goagent翻墙：等您坐沙发呢！</h3>
+
+	<div class="navigation">
+		<div class="page_navi"></div>
+	</div>
+	<div id="comment-place">
+	<div class="comment-post" id="comment-post">
+	<div id="respond_box">
+	<div id="respond">
+		<h3>发表评论</h3>	
+
+		<div class="cancel-comment-reply">
+		<div id="real-avatar">
+				<img src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/d41d8cd98f00b204e9800998ecf8427e.jpg" class="avatar photo avatar-default" name="gravarimg" height="40" width="40">
+					
+		</div>	
+		
+		<div class="cancel-reply" id="cancel-reply" style="display:none"><a rel="nofollow" href="javascript:void(0);" onclick="cancelReply()">点击这里取消回复。</a></div>
+		</div>
+		
+		
+		<p class="comment-header"><a name="respond"></a></p>
+		<form method="post" name="commentform" action="http://www.huiwei19.com/index.php?action=addcom" id="commentform">
+		<input name="gid" value="825" type="hidden">
+				<div id="comment-author-info">
+			<p>
+				<input name="comname" maxlength="49" size="22" tabindex="1" type="text">
+				<label for="author">昵称</label>
+			</p>
+			<p>
+				<input name="commail" onblur="gravatarimg()" maxlength="128" size="22" tabindex="2" type="text">
+				<label for="email">邮箱</label>
+			</p>
+			<p>
+				<input name="comurl" maxlength="128" size="22" tabindex="3" type="text">
+				<label for="url">网址</label>
+			</p>
+		</div>
+					<div class="clear"></div>
+			<!--原表情
+			<p>﻿<script type="text/javascript">
+/* <![CDATA[ */
+    function grin(tag) {
+    	var myField;
+    	tag = ' ' + tag + ' ';
+        if (document.getElementById('comment') && document.getElementById('comment').type == 'textarea') {
+    		myField = document.getElementById('comment');
+    	} else {
+    		return false;
+    	}
+    	if (document.selection) {
+    		myField.focus();
+    		sel = document.selection.createRange();
+    		sel.text = tag;
+    		myField.focus();
+    	}
+    	else if (myField.selectionStart || myField.selectionStart == '0') {
+    		var startPos = myField.selectionStart;
+    		var endPos = myField.selectionEnd;
+    		var cursorPos = endPos;
+    		myField.value = myField.value.substring(0, startPos)
+    					  + tag
+    					  + myField.value.substring(endPos, myField.value.length);
+    		cursorPos += tag.length;
+    		myField.focus();
+    		myField.selectionStart = cursorPos;
+    		myField.selectionEnd = cursorPos;
+    	}
+    	else {
+    		myField.value += tag;
+    		myField.focus();
+    	}
+    }
+/* ]]> */
+</script>
+<a href="javascript:grin('[1]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/1.gif" /></a>
+<a href="javascript:grin('[2]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/2.gif" /></a>
+<a href="javascript:grin('[3]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/3.gif" /></a>
+<a href="javascript:grin('[4]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/4.gif" /></a>
+<a href="javascript:grin('[5]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/5.gif" /></a>
+<a href="javascript:grin('[6]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/6.gif" /></a>
+<a href="javascript:grin('[7]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/7.gif" /></a>
+<a href="javascript:grin('[8]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/8.gif" /></a>
+<a href="javascript:grin('[9]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/9.gif" /></a>
+<a href="javascript:grin('[10]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/10.gif" /></a>
+<a href="javascript:grin('[11]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/11.gif" /></a>
+<a href="javascript:grin('[12]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/12.gif" /></a>
+<a href="javascript:grin('[13]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/13.gif" /></a>
+<a href="javascript:grin('[14]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/14.gif" /></a>
+<a href="javascript:grin('[15]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/15.gif" /></a>
+<a href="javascript:grin('[16]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/16.gif" /></a>
+<a href="javascript:grin('[17]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/17.gif" /></a>
+<a href="javascript:grin('[18]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/18.gif" /></a>
+<a href="javascript:grin('[19]')"><img src="http://www.huiwei19.com/content/templates/Hcms/face/19.gif" /></a>
+
+<br />
+
+</p>
+			-->
+			<p><textarea name="comment" id="comment" rows="10" tabindex="4"></textarea></p>
+			<p> <style type="text/css">/* jQuery Ajax 提交、刷新 评论*/#JA_commenLoading{font-size:12px;background:url(data:images/gif;base64,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) no-repeat left center;padding-left:22px;margin-bottom:5px}#JA_commenError{font-size:12px;background:url(data:images/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABdElEQVQ4y6WTS0sCcRTFTfC5UEyZhYj4xAcoiowwDIKSQRtxkQgK4i5wFUGua6frdkKupXVfIMMv0KZFtVCLTAgFWxXp6c4EE4OPtBaHyz338PvfyzAKAIqlqlR2Vs5Jy4eNhg8+X48gu38DxOOXUCqBUOhmc0C1moTJNIHVCuj1M9qivAlACafzCpHIJ4rFA6pj2O335OvWA+Tz+zAYPsCyT9RrwHG30OmmyGaPfwcMhxaEwx3xdpZ9pVPsiMUexN7lukO77V4NSKVKsFi+7WBQeNUBr/dF7I1G0DYnlNtaDGi1thGNdkVLkM0GFAohMMxI8vz+Eer1wGJAJnMIjQZSWKsFkslr8qaSp1IBPH9GeZUcUKuZaNV3KSjI7Z7Q/afweAYy3+EASqWAHJDLnctCglh2jGZzj+7uzs3S6Qs5gGEwF1KrZ/Q536hO52ZmM1AuH/0AOO4ZiUSP1JfE833yB1QfZb6QE/K5XGf1v7Cm/g34AiZUmQgJdHT+AAAAAElFTkSuQmCC) no-repeat left center;padding-left:22px;margin-top:5px;color:red}</style><div id="JA_commenLoading" style="display:none;">评论提交中... 请稍后</div><div id="JA_commenError"></div><input id="submit" value="发表评论" tabindex="6" type="submit"><input class="reset" name="reset" id="reset" tabindex="6" value="重写" type="reset"></p>
+			
+			<input name="pid" id="comment-pid" value="0" size="22" tabindex="1" type="hidden">
+		</form>
+		<div class="clear"></div>
+	</div>
+	</div>
+		</div>
+	</div>
+
+	  <div class="clear"></div>
+</div><!--内容-->
+	
+</div><!--end #art_container-->
+<div id="sider" class="fr">
+<div class="feed-mail">
+	<div class="box">
+		<ul id="contact-li">
+		
+<li class="qq"><a rel="nofollow" target="_blank" href="http://wpa.qq.com/msgrd?V=1&amp;Menu=yes&amp;Uin=68852874" title="有急事请Q我">QQ联系</a></li>
+<li class="email"><a rel="nofollow" target="_blank" href="mailto:68852874@qq.com" title="发邮件给我">邮件</a></li>
+<li class="twitter"><a rel="nofollow" target="_blank" href="https://twitter.com/huiwei19" title="收听我的Twitter微博">Twitter微博</a></li>
+<li class="qqmblog"><a rel="nofollow" target="_blank" href="http://t.qq.com/mr-fanggd" title="收听我的腾讯微博">腾讯微博</a></li>
+<li class="sinamblog"><a rel="nofollow" target="_blank" href="http://weibo.com/huiwei19" title="收听我的新浪微博">新浪微博</a></li>
+<li class="rss"><a rel="nofollow" target="_blank" href="http://www.huiwei19.com/rss.php" title="通过RSS订阅我的博客">RSS订阅</a></li>
+		</ul>
+	</div>
+			<form action="http://list.qq.com/cgi-bin/qf_compose_send" target="_blank" method="post">
+		<input name="t" value="qf_booked_feedback" type="hidden">
+		<input name="id" value="112e9183dc13c1867ce38a00717c617ef067f77d33fec111" type="hidden">
+		<input id="to" onfocus="if (this.value == '输入邮箱 订阅本站') {this.value = '';}" onblur="if (this.value == '') {this.value = '输入邮箱 订阅本站';}" value="输入邮箱 订阅本站" name="to" class="feed-mail-input" type="text"><input class="feed-mail-btn" value="订阅" type="submit">
+		</form>
+	<div class="gg">
+
+<p>------======<strong> 本站公告 </strong>======------<br>
+
+2015，总结经验，迎接新的开始！
+
+</p>
+
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+	<div class="con_box htabs_art clearfix"> 
+		<ul class="cooltab_nav sj_nav clearfix">
+			<li><a href="#" class="active" title="new_art">最新文章</a></li>
+			<li><a href="#" title="hot_art">热门文章</a></li>
+			<li><a href="#" title="rand_art">随机推荐</a></li>
+		</ul>   
+		<div style="display: block;" id="new_art" class="com_cont">   
+		<ul>
+			<li><a href="http://www.huiwei19.com/software/free-vpn-vpngate.html" class="title">[15-05-16更新]免费VPN之VPNGate-日本国立筑波大学公益产品</a></li>
+		<li><a href="http://www.huiwei19.com/software/multi-platforms-to-use-Shadowsocks.html" class="title">多平台使用Shadowsocks客户端</a></li>
+		<li><a href="http://www.huiwei19.com/skill/the-usage-of-vim-on-linux.html" class="title">Linux下Vim的基本用法</a></li>
+		<li><a href="http://www.huiwei19.com/news/868.html" class="title">解密2015年淘宝刷单内幕</a></li>
+		<li><a href="http://www.huiwei19.com/software/XunleiKuaiNiao_cracked.html" class="title">迅雷快鸟破解版官方免费版 2.0.3.26 &amp;安卓1.0版</a></li>
+			</ul>                    
+		</div>
+        <div style="display: none;" id="hot_art" class="com_cont">  
+            <ul>
+			<li><a href="http://www.huiwei19.com/software/433.html" class="title">【抓包工具】Charles v3.6.4 破解版</a></li>
+		<li><a href="http://www.huiwei19.com/software/free-vpn-vpngate.html" class="title">[15-05-16更新]免费VPN之VPNGate-日本国立筑波大学公益产品</a></li>
+		<li><a href="http://www.huiwei19.com/software/79.html" class="title">Office Password Recovery Toolbox 3.5破解版(破解文档密码)</a></li>
+		<li><a href="http://www.huiwei19.com/free/377.html" class="title">分享一个几乎无限制的免费VPN——Vpnreactor</a></li>
+		<li><a href="http://www.huiwei19.com/skill/694.html" class="title">关于“墙”的一些扫盲</a></li>
+				</ul>      
+		</div>
+		<div style="display: none;" id="rand_art" class="com_cont">  
+			<ul>
+			<li><a href="http://www.huiwei19.com/emotion/224.html" class="title">时隔17天，Google PR再次更新，今年已经第三次了~Google在打什么主意？</a></li>
+		<li><a href="http://www.huiwei19.com/news/225.html" class="title">超强台风“梅花”来袭 杭州严阵以待</a></li>
+		<li><a href="http://www.huiwei19.com/software/226.html" class="title">无敌QQ邮件群发机6.1破解版(QQ邮件群发工具自动更换IP)</a></li>
+		<li><a href="http://www.huiwei19.com/software/227.html" class="title">QQ全能王V6.0 破解版</a></li>
+		<li><a href="http://www.huiwei19.com/science/228.html" class="title">天宫一号8月中下旬择机发射 进入发射倒计时</a></li>
+				</ul>
+		</div>   
+	</div>
+
+
+	<div class="con_box hot_box">
+		<h3>最新评论</h3>
+		<div class="r_comments">
+			<ul>
+		<li><img original="http://gravatar.duoshuo.com/avatar/8d0cad9fd3e982f30620bc96ec639cfb?s=&amp;d=&amp;r=" class="newcomm" alt="小赛seo博客" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/8d0cad9fd3e982f30620bc96ec639cfb.jpg" height="32" width="32">
+	<a href="http://www.huiwei19.com/software/free-vpn-vpngate.html#6941">小赛seo博客:
+	<p>这个好啊！！谢谢博主啦！{smile:1...</p></a></li>
+		<li><img original="http://gravatar.duoshuo.com/avatar/c80c1cf146722e65b386677557731220?s=&amp;d=&amp;r=" class="newcomm" alt="bluemoon" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/c80c1cf146722e65b386677557731220.jpg" height="32" width="32">
+	<a href="http://www.huiwei19.com/software/free-vpn-vpngate.html#6940">bluemoon:
+	<p>强烈推荐啊,速度快,还免费.
+
+如果...</p></a></li>
+		<li><img original="http://gravatar.duoshuo.com/avatar/736d0014273ff1e99124739c807759a5?s=&amp;d=&amp;r=" class="newcomm" alt="↗℡ 浮华 青春" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/736d0014273ff1e99124739c807759a5.png" height="32" width="32">
+	<a href="http://www.huiwei19.com/software/multi-platforms-to-use-Shadowsocks.html#6938">↗℡ 浮华 青春:
+	<p>@Andrew：好的~</p></a></li>
+		<li><img original="http://gravatar.duoshuo.com/avatar/666d6e11c50d3b458b5ef3f5366fd736?s=&amp;d=&amp;r=" class="newcomm" alt="网络兼职网站" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/666d6e11c50d3b458b5ef3f5366fd736.jpg" height="32" width="32">
+	<a href="http://www.huiwei19.com/skill/the-usage-of-vim-on-linux.html#6936">网络兼职网站:
+	<p>很详细&nbsp;&nbsp;不错 学习了</p></a></li>
+		<li><img original="http://gravatar.duoshuo.com/avatar/9204ede7e5fc50f5169f475e1e8f5921?s=&amp;d=&amp;r=" class="newcomm" alt="Andrew" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/9204ede7e5fc50f5169f475e1e8f5921.jpg" height="32" width="32">
+	<a href="http://www.huiwei19.com/software/multi-platforms-to-use-Shadowsocks.html#6935">Andrew:
+	<p>爱吧博客改为主机百科
+域名由wiki8...</p></a></li>
+		<li><img original="http://gravatar.duoshuo.com/avatar/3a18456b7b4b15565dcef10e65f1bd05?s=&amp;d=&amp;r=" class="newcomm" alt="wp" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/3a18456b7b4b15565dcef10e65f1bd05.jpg" height="32" width="32">
+	<a href="http://www.huiwei19.com/skill/the-usage-of-vim-on-linux.html#6934">wp:
+	<p>goodjob！！啊</p></a></li>
+		<li><img original="http://gravatar.duoshuo.com/avatar/c7956d2aa160c6f1c5d9372bd01f23a0?s=&amp;d=&amp;r=" class="newcomm" alt="xhhjin" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/c7956d2aa160c6f1c5d9372bd01f23a0.jpg" height="32" width="32">
+	<a href="http://www.huiwei19.com/skill/emlog-ajax-comment.html#6933">xhhjin:
+	<p>测试下效果。</p></a></li>
+	</ul>
+		</div>				
+	</div>
+	<div class="con_box hot_box">
+	<h3>北京时间</h3>
+	<ul>
+	<embed pluginspage="http://www.macromedia.com/go/getflashplayer" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/time.swf" type="application/x-shockwave-flash" wmode="transparent" quality="high" height="75" width="260">
+<p><span class="Apple-style-span" style="font-family:Geneva, Arial, Helvetica, sans-serif;font-size:14px;line-height:21px;-webkit-border-horizontal-spacing:2px;-webkit-border-vertical-spacing:2px;"><b>敢于浪费哪怕一个钟头时间的人，说明他还不懂得珍惜时间的全部价值。</b></span></p>
+<p style="text-align:right;"><span class="Apple-style-span" style="font-family:'Geneva, Arial, Helvetica, sans-serif';"><span class="Apple-style-span" style="font-size:14px;line-height:21px;-webkit-border-horizontal-spacing:2px;-webkit-border-vertical-spacing:2px;"><b>——达尔文</b></span></span></p>	</ul>
+	</div>
+	<div class="con_box hot_box">
+	<h3>分类</h3>
+	<ul id="blogsort">
+		<li>
+	<a href="http://www.huiwei19.com/sort/software">精品软件(185)</a>
+	<a href="http://www.huiwei19.com/rss.php?sort=4"><img original="http://www.huiwei19.com/content/templates/Hcms/images/common/rss_icon.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="订阅该分类"></a>
+	</li>
+		<li>
+	<a href="http://www.huiwei19.com/sort/skill">技术分享(143)</a>
+	<a href="http://www.huiwei19.com/rss.php?sort=6"><img original="http://www.huiwei19.com/content/templates/Hcms/images/common/rss_icon.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="订阅该分类"></a>
+	</li>
+		<li>
+	<a href="http://www.huiwei19.com/sort/emotion">情感天地(98)</a>
+	<a href="http://www.huiwei19.com/rss.php?sort=5"><img original="http://www.huiwei19.com/content/templates/Hcms/images/common/rss_icon.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="订阅该分类"></a>
+	</li>
+		<li>
+	<a href="http://www.huiwei19.com/sort/ITnews">IT资讯(84)</a>
+	<a href="http://www.huiwei19.com/rss.php?sort=2"><img original="http://www.huiwei19.com/content/templates/Hcms/images/common/rss_icon.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="订阅该分类"></a>
+	</li>
+		<li>
+	<a href="http://www.huiwei19.com/sort/news">新闻杂烩(62)</a>
+	<a href="http://www.huiwei19.com/rss.php?sort=8"><img original="http://www.huiwei19.com/content/templates/Hcms/images/common/rss_icon.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="订阅该分类"></a>
+	</li>
+		<li>
+	<a href="http://www.huiwei19.com/sort/free">免费资源(93)</a>
+	<a href="http://www.huiwei19.com/rss.php?sort=3"><img original="http://www.huiwei19.com/content/templates/Hcms/images/common/rss_icon.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="订阅该分类"></a>
+	</li>
+		<li>
+	<a href="http://www.huiwei19.com/sort/science">科技创想(32)</a>
+	<a href="http://www.huiwei19.com/rss.php?sort=12"><img original="http://www.huiwei19.com/content/templates/Hcms/images/common/rss_icon.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="订阅该分类"></a>
+	</li>
+		<li>
+	<a href="http://www.huiwei19.com/sort/video">超强视频(31)</a>
+	<a href="http://www.huiwei19.com/rss.php?sort=7"><img original="http://www.huiwei19.com/content/templates/Hcms/images/common/rss_icon.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="订阅该分类"></a>
+	</li>
+		<li>
+	<a href="http://www.huiwei19.com/sort/SiteNotice">本站公告(13)</a>
+	<a href="http://www.huiwei19.com/rss.php?sort=1"><img original="http://www.huiwei19.com/content/templates/Hcms/images/common/rss_icon.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="订阅该分类"></a>
+	</li>
+		<li>
+	<a href="http://www.huiwei19.com/sort/picmusic">美图音乐(6)</a>
+	<a href="http://www.huiwei19.com/rss.php?sort=10"><img original="http://www.huiwei19.com/content/templates/Hcms/images/common/rss_icon.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="订阅该分类"></a>
+	</li>
+		<li>
+	<a href="http://www.huiwei19.com/sort/programme">编程分享(23)</a>
+	<a href="http://www.huiwei19.com/rss.php?sort=11"><img original="http://www.huiwei19.com/content/templates/Hcms/images/common/rss_icon.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="订阅该分类"></a>
+	</li>
+		<li>
+	<a href="http://www.huiwei19.com/sort/appliances">辅助共享(20)</a>
+	<a href="http://www.huiwei19.com/rss.php?sort=13"><img original="http://www.huiwei19.com/content/templates/Hcms/images/common/rss_icon.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="订阅该分类"></a>
+	</li>
+		</ul>
+	</div>
+<div class="clear"></div>
+<div style="display: none; top: 0px;" class="hcms_rollbox"></div><div id="rollstart"></div>
+</div><!--end #siderbar-->
+</div><!--end #wrap-->
+
+<div id="footer" class="clearfix">
+    <div class="con_box ">
+
+
+<div class="footer_bug">
+<a rel="nofollow" href="http://www.huiwei19.com/rss.php">RSS订阅</a>  |
+<a rel="nofollow" href="http://www.huiwei19.com/about.html">关于</a>  |
+<a href="http://www.huiwei19.com/sitemap.xml">sitemap</a>
+</div>
+<!--JS提交评论-->
+<script type="text/javascript" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/JA_AjaxCommentForEmlog.js"></script>
+
+
+    </div>
+    
+	<div class="copyright">
+    <p>   本站为个人站点，内容仅供观摩学习交流之用，将不对任何资源负法律责任。如有侵犯您的版权，请及时联系管理员，我们将尽快处理。</p>
+<p class="powered">Copyright © 2011-2015 回味依旧博客 Powered by Emlog <a href="http://www.miibeian.gov.cn/" target="_blank"></a> Designed by UU&amp;倡萌 <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_2526043'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D2526043%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_2526043"><a href="http://www.cnzz.com/stat/website.php?web_id=2526043" target="_blank" title="站长统计"><img original="http://icon.cnzz.com/img/pic.gif" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" border="0" hspace="0" vspace="0"></a></span><script src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/stat.php" type="text/javascript"></script><script src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/core.php" charset="utf-8" type="text/javascript"></script>
+<script type="text/javascript">
+(function() {
+    var c = document.createElement('script'); 
+    c.type = 'text/javascript';
+    c.async = true;
+    c.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.clicki.cn/boot/47019';
+    var h = document.getElementsByTagName('script')[0];
+    h.parentNode.insertBefore(c, h);
+})();
+</script><script type="text/javascript">XMLHttp.sendReq('GET','http://www.huiwei19.com/content/plugins/kl_auto_backup_and_mail/kl_auto_backup_and_mail_do.php','',function(obj){return;});</script>
+<script type="text/javascript" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/jquery-1.js"></script>
+<link href="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/highslide.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/highslide.js"></script>
+<script type="text/javascript">
+    hs.graphicsDir = "http://www.huiwei19.com/content/plugins/kl_highslide/highslide/graphics/";
+    hs.outlineType = "rounded-white";
+    jQuery(function($){$("a[href$=jpg],a[href$=gif],a[href$=png],a[href$=jpeg],a[href$=bmp]").addClass("highslide").each(function(){this.onclick=function(){return hs.expand(this)}});})
+</script>
+</p> 
+<!-- /powered -->
+   </div>
+   
+   <div class="footer_right">
+   <img original="http://www.huiwei19.com/content/templates/Hcms/images/common/footer_logo.jpg" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/space.gif" alt="回味依旧博客" height="50" width="150">
+   </div>
+
+<div id="shangxia">
+<div id="shang" title="↑ 返回顶部"></div>
+<div id="cmmt" title="我要评论"></div>
+<div id="xia" title="↓ 移至底部"></div>
+<!--div id="myrss" title="Hi! 我是小宠物，欢迎光临主人的博客，赶快订阅一下吧O(∩_∩)O~" onClick="window.open('http://www.huiwei19.com/rss.php','_blank');"></div>
+</div--></div>
+<script type="text/javascript" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/jquery.js"></script>
+<script type="text/javascript" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/jquery_cmhello.js"></script>
+<script type="text/javascript" src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/jquery_002.js"></script>
+<script src="%E5%88%A9%E7%94%A8Gogo%20tester+goagent%E7%BF%BB%E5%A2%99%20-%20%E5%9B%9E%E5%91%B3%E4%BE%9D%E6%97%A7%E5%8D%9A%E5%AE%A2_files/md5.js" type="text/javascript"></script>
+<script type="text/javascript">HcmsLazyload("http://www.huiwei19.com/content/templates/Hcms/images/common/space.gif");</script>
+<script>$('.newcomm').lazyload();</script>
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=2977d8d74f63d7f8fedbea018b7a1d05&ns=1';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+</script>
+</div><div style="padding: 0px; border: medium none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001; direction: ltr;" class="highslide-container"><a style="position: absolute; top: -9999px; opacity: 0.75; z-index: 1;" href="javascript:;" title="点击取消" class="highslide-loading">正在载入...</a><div style="display: none;"></div><table style="padding: 0px; border: medium none; margin: 0px; visibility: hidden; position: absolute; border-collapse: collapse; width: 0px;" cellspacing="0"><tbody style="padding: 0px; border: medium none; margin: 0px;"><tr style="padding: 0px; border: medium none; margin: 0px; height: auto;"><td style="padding: 0px; border: medium none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.huiwei19.com/content/plugins/kl_highslide/highslide/graphics/outlines/rounded-white.png&quot;) repeat scroll 0px 0px transparent; height: 20px; width: 20px;"></td><td style="padding: 0px; border: medium none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.huiwei19.com/content/plugins/kl_highslide/highslide/graphics/outlines/rounded-white.png&quot;) repeat scroll 0px -40px transparent; height: 20px; width: 20px;"></td><td style="padding: 0px; border: medium none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.huiwei19.com/content/plugins/kl_highslide/highslide/graphics/outlines/rounded-white.png&quot;) repeat scroll -20px 0px transparent; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: medium none; margin: 0px; height: auto;"><td style="padding: 0px; border: medium none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.huiwei19.com/content/plugins/kl_highslide/highslide/graphics/outlines/rounded-white.png&quot;) repeat scroll 0px -80px transparent; height: 20px; width: 20px;"></td><td class="rounded-white highslide-outline" style="padding: 0px; border: medium none; margin: 0px; position: relative;"></td><td style="padding: 0px; border: medium none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.huiwei19.com/content/plugins/kl_highslide/highslide/graphics/outlines/rounded-white.png&quot;) repeat scroll -20px -80px transparent; height: 20px; width: 20px;"></td></tr><tr style="padding: 0px; border: medium none; margin: 0px; height: auto;"><td style="padding: 0px; border: medium none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.huiwei19.com/content/plugins/kl_highslide/highslide/graphics/outlines/rounded-white.png&quot;) repeat scroll 0px -20px transparent; height: 20px; width: 20px;"></td><td style="padding: 0px; border: medium none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.huiwei19.com/content/plugins/kl_highslide/highslide/graphics/outlines/rounded-white.png&quot;) repeat scroll 0px -60px transparent; height: 20px; width: 20px;"></td><td style="padding: 0px; border: medium none; margin: 0px; line-height: 0; font-size: 0px; background: url(&quot;http://www.huiwei19.com/content/plugins/kl_highslide/highslide/graphics/outlines/rounded-white.png&quot;) repeat scroll -20px -20px transparent; height: 20px; width: 20px;"></td></tr></tbody></table></div></body></html>
