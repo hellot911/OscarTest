@@ -1,4 +1,4 @@
 #include <xx.h>
 
 
-void main()
+void()
